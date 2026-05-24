@@ -57,8 +57,7 @@ class IaController extends Controller
         } catch (\Exception $e) {
             $resultado = "Error de conexión: " . $e->getMessage() . ". Asegúrate de que Ollama esté corriendo y configurado correctamente en tu .env (Base URL: {$baseUrl})";
         }
-
-        // 4. Devolver a la vista con el resultado, el prompt y el contexto
+        
         return view('ia.formulario', [
             'resultado' => $resultado,
             'prompt' => $prompt,
